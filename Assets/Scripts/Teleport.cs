@@ -4,19 +4,10 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float areaOfOperation = 0.5f;
+    public Transform finishTeleport;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void FixedUpdate()
+    private void OnTriggerEnter(Collider other)
     {
         
     }
