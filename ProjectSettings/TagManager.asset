@@ -9,6 +9,7 @@ TagManager:
   - TeleportStart
   - TeleportFinish
   - PlayerPoint
+  - Switch
   layers:
   - Default
   - TransparentFX

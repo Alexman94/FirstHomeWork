@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    public float areaOfOperation = 0.5f;
+
     public Transform finishTeleport;
+    bool teleportation = true;
+    static int count = 1;
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            if (teleportation && (count % 3) != 0)
+            {
+                other.transform.position = finishTeleport.position;
+            }
+            count++;
+        }
     }
 }
