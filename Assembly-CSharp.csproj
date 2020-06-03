@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\DeadZone.cs" />
     <Compile Include="Assets\Scripts\FollowingObject.cs" />
+    <Compile Include="Assets\Scripts\MySwitch.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Teleport.cs" />
     <Reference Include="Unity.Timeline.Editor">

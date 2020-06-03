@@ -1,23 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-
-    public Transform finishTeleport;
-    bool teleportation = true;
+    public GameObject Switch1;
+    public GameObject Switch2;
+    public Transform finishTeleport1;
+    public Transform finishTeleport2;
     static int count = 1;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            if (teleportation && (count % 3) != 0)
+            if (!(Switch1.GetComponent<MySwitch>().switchOn) || !(Switch2.GetComponent<MySwitch>().switchOn))
             {
-                other.transform.position = finishTeleport.position;
+                if (count % 2 == 0)
+                    other.transform.position = finishTeleport1.position;
+                else
+                    other.transform.position = finishTeleport2.position;
+                count++;
             }
-            count++;
         }
     }
+
+
 }
